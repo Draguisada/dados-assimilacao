@@ -12,23 +12,27 @@
     <script src="JS/main.js" defer></script>
 </head>
 <body>
-    <div>
-        <input type="number" name="quantDados" id="x6">
-        <h1>X6</h1>
-    </div>
-    <div>
-        <input type="number" name="quantDados" id="x10">
-        <h1>X10</h1>
-    </div>
-    <div>
-        <input type="number" name="quantDados" id="x12">
-        <h1>X12</h1>
-    </div>
-    <input type="button" value="Rolar!" id="roll">
-    <input type="button" value="Limpar resultados" id="limparResult">
-    <p>Você pode clicar nos dados para excluir-los individualmente</p><br>
-    <input type="checkbox" name="manterDado" id="manterDado" value="true">
-    <label for="manterDado">Mantes resultados ao rolar?</label>
+    <main>
+        <div>
+            <input type="number" name="quantDados" id="x6">
+            <h1>X6</h1>
+        </div>
+        <div>
+            <input type="number" name="quantDados" id="x10">
+            <h1>X10</h1>
+        </div>
+        <div>
+            <input type="number" name="quantDados" id="x12">
+            <h1>X12</h1>
+        </div>
+        <div id="inputs">
+            <input type="button" value="ROLAR!" id="roll">
+            <input type="button" value="Limpar resultados" id="limparResult">
+            <p>Você pode clicar nos dados para excluir-los individualmente</p><br>
+            <input type="checkbox" name="manterDado" id="manterDado" checked=true>
+            <label for="manterDado">Mantes resultados ao rolar?</label>
+        </div>
+    </main>
     
 
     <div id="historico"></div>

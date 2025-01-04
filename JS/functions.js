@@ -7,12 +7,12 @@ function validarValores () {
 }
 
 function rolarDados() {
-
+    let rolarDados;
     if (!manterDados.checked) {
         limparMesa();
     }
-
-    let rolarDados = validarValores();
+    
+    rolarDados = validarValores();
     let resultados = [];
     // Rolar todos os dados e identificando qual é X6, X10 ou X12.
     for(i=0;i<rolarDados.x6;i++) {

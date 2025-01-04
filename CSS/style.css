@@ -20,6 +20,21 @@ div {
     display: flex;
 }
 
+main {
+    /* display: flex; */
+    flex-wrap: wrap;
+}
+
+#inputs {
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+input[type=checkbox] {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
 input[type=number] {
     font-size: 100%;
     font-weight: bold;
@@ -43,6 +58,22 @@ input[type=number] {
     align-items: center;
     align-content: flex-start;
     gap: 2%;
+}
+
+#roll {
+    background-color: var(--roll-button-background-color);
+    width: 3rem;
+    height: 2rem;
+    font-weight: bold;
+    border: var(--roll-button-border-color);
+}
+
+#limparResult {
+    background-color: var(--roll-button-background-color);
+    width: 5.5rem;
+    height: 2rem;
+    font-weight: bold;
+    border: var(--roll-button-border-color);
 }
 
 .x6, .x10, .x12 {
@@ -84,6 +115,7 @@ input[type=number] {
     position: absolute;
     padding:2%;
     z-index:0;
+    width: max-content;
 }
 
 #mesa > div:hover .desc {
@@ -103,7 +135,7 @@ input#limparResult + p {
 }
 
 
-@media (max-width: 945px) {
+@media (max-width: 1180px) {
     #mesa {
         top: calc(max(5%, 30vh));
         right: 5%;
