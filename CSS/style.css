@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+div {
+    display: flex;
+}
+
+input[type=number] {
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+    width: 2em;
+    height: 2em;
+}
+
+#mesa {
+    width: calc(min(80svh, 80vw));
+    height: calc(max(80svh, min(60vw, 00vh)));
+    background-color: var(--mesa-background-color);
+    border: 10px var(--mesa-boeder-color) dashed;
+    position: absolute;
+    right:5%;
+    top: 5%;
+}
+
+@media (max-width: 945px) {
+    #mesa {
+        top: calc(max(5%, 30vh));
+        right: 5%;
+    }
+}
