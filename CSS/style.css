@@ -1,3 +1,12 @@
+:root {
+    font-size: 24px;
+
+    --number-size: 4rem;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 * {
     margin: 0;
 }
@@ -27,7 +36,72 @@ input[type=number] {
     position: absolute;
     right:5%;
     top: 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start;
+    gap: 2%;
 }
+
+.x6, .x10, .x12 {
+    transition: 1s all ease-in-out;
+    color: black;
+    margin: 5px;
+
+    height: calc(max(16%, 100px));
+    width: calc(max(16%, 100px));
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.x6 {
+    background-color: white;
+}
+
+.x10 {
+    background-image: url(../Icons/x10.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.x12 {
+    background-image: url(../Icons/x12.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.desc, .desc:hover{
+    display: none;
+    transform: translate(0, 100%);
+    background-color: var(--comentario-background-color);
+    color: var(--comentario-text-color);
+    position: absolute;
+    padding:2%;
+    z-index:0;
+}
+
+#mesa > div:hover .desc {
+    display: flex;
+}
+
+input#limparResult + p {
+    display: none;
+    position: absolute;
+    background-color: var(--comentario-background-color);
+    color: var(--comentario-text-color);
+    padding:0.2%;
+}
+
+#limparResult:hover + p {
+    display: block;
+}
+
 
 @media (max-width: 945px) {
     #mesa {
