@@ -1,13 +1,23 @@
+// Objetos HTML
 const mesa = document.getElementById('mesa');
 
+const sucessos = document.getElementById('suc');
+const adaptacoes = document.getElementById('adap');
+const pressoes = document.getElementById('pres');
+let sucessosTotal = 0;
+let adaptacoesTotal = 0;
+let pressoesTotal = 0;
+// Pegar valores
 const quantX6 = document.getElementById('x6');
 const quantX10 = document.getElementById('x10');
 const quantX12 = document.getElementById('x12');
+
+// Botoes
 const limparResults = document.getElementById('limparResult');
 const manterDados = document.getElementById('manterDado');
-
 const roll = document.getElementById('roll');
 
+// Objetos JS
 const tabelaDados = {
     1: '',
     2: '',
@@ -25,11 +35,23 @@ const tabelaDados = {
 
 let historico = [];
 
+// Código base
 roll.addEventListener('click', rolarDados);
 
 // Quando clica em um dado ele remove o dado.
 mesa.addEventListener('click', event => {
-    mesa.removeChild(event.target);
+    if (event.target != mesa) {
+        let numeros = event.target.textContent.match(/[0-9]/g);
+        let string = ''; string = '';
+        string += '!'.repeat(Number(numeros[0]));
+        string += '?'.repeat(Number(numeros[1]));
+        string += '#'.repeat(Number(numeros[2]));
+        
+        contarSimbolos(string, -1);
+        updateTotal();
+    
+        mesa.removeChild(event.target);
+    }
 });
 
 limparResults.addEventListener('click', limparMesa);

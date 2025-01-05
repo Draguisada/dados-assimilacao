@@ -6,7 +6,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 * {
     margin: 0;
 }
@@ -14,6 +13,9 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
+    margin-top: var(--margin-top-size);
+    margin-left:2vw;
+    /* margin-right:2vw; */
 }
 
 div {
@@ -23,16 +25,32 @@ div {
 main {
     /* display: flex; */
     flex-wrap: wrap;
+    width: 50vw;
 }
 
-#inputs {
-    width: 30%;
-    justify-content: space-evenly;
+#menu {
+    display: inline-block;
+    height: fit-content;
+    align-content: flex-start;
+    padding-top: 5%;
+}
+
+/*Botões*/
+
+input[type=button] {
+    cursor:pointer;
 }
 
 input[type=checkbox] {
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 44px;
+    width: 44px;
+}
+
+#manterDado + p {
+    font-size: 18px;
+    align-items: center;
+    align-content: center;
+    margin-left:1%;
 }
 
 input[type=number] {
@@ -43,46 +61,99 @@ input[type=number] {
     height: 2em;
 }
 
-#mesa {
-    width: calc(min(80svh, 80vw));
-    height: calc(max(80svh, min(60vw, 00vh)));
-    background-color: var(--mesa-background-color);
-    border: 10px var(--mesa-boeder-color) dashed;
-    position: absolute;
-    right:5%;
-    top: 5%;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: flex-start;
-    gap: 2%;
+#rollDel {
+    gap: 3%;
+    width: 12rem;
 }
 
 #roll {
     background-color: var(--roll-button-background-color);
-    width: 3rem;
-    height: 2rem;
+    width: 70%;
+    height: 5rem;
     font-weight: bold;
     border: var(--roll-button-border-color);
+    font-size: 48px;
+    border-radius: 10px 0 0 10px;
 }
 
 #limparResult {
+    background-image: url(../Icons/trash.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: var(--roll-button-background-color);
-    width: 5.5rem;
-    height: 2rem;
+    width: 30%;
+    height: 5rem;
     font-weight: bold;
     border: var(--roll-button-border-color);
+    border-radius: 0 10px 10px 0;
 }
+
+input#limparResult + p {
+    display: none;
+    position: absolute;
+    transform: translateY(-100%);
+    background-color: var(--comentario-background-color);
+    color: var(--comentario-text-color);
+    padding:0.2%;
+}
+
+#limparResult:hover + p {
+    display: block;
+}
+
+#limparResult:hover + p:hover {
+    display: none;
+}
+/* Dados "menu"*/
+
+#dados {
+    justify-content: space-between;
+    width: 90%;
+}
+
+#dados h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+#dados > div {
+    width: 140px;
+    height: calc(140px + 3rem);
+    display: flex;
+    flex-direction: column;
+}
+
+#dados img {
+    position: absolute;
+    top:calc(2.5rem + var(--margin-top-size));
+    z-index: 0;
+    pointer-events: none;
+}
+
+#dados input {
+    z-index: 2;
+    justify-self: center;
+    align-self: center;
+
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: center;
+    transform: translateX(5%);
+    font-size: 48px;
+}
+
+
+/*Dados literais*/
 
 .x6, .x10, .x12 {
     transition: 1s all ease-in-out;
     color: black;
     margin: 5px;
 
-    height: calc(max(16%, 100px));
-    width: calc(max(16%, 100px));
+    height: calc(max(16svh, 100px));
+    width: calc(max(16svh, 100px));
 
     align-items: center;
     justify-content: center;
@@ -107,6 +178,52 @@ input[type=number] {
     background-position: center;
 }
 
+/*Dados fim*/
+
+
+
+/* Mesa */
+
+aside {
+    border: 10px transparent solid;
+    position: absolute;
+    right:5%;
+    top: 5%;
+}
+
+#mesa {
+    width: calc(min(80svh, 80vw));
+    min-height: calc(max(80svh, min(60vw, 00vh)));
+    /* height: calc(max(80svh, min(60vw, 00vh))); */
+    max-height: fit-content;
+    background-color: var(--mesa-background-color);
+    border: 10px var(--mesa-border-color) dashed;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start;
+    gap: 2%;
+}
+
+#total {
+    position: absolute;
+    right:5%;
+    top: 0;
+    width: 100%;
+    right: 0;
+    justify-content: space-evenly;
+    background-color: var(--comentario-background-color);
+    color: var(--comentario-text-color);
+    border-radius:  10px 10px 0 0;
+    transform: translateY(-100%);
+}
+
+#mesa > div:hover .desc {
+    display: flex;
+}
+
 .desc, .desc:hover{
     display: none;
     transform: translate(0, 100%);
@@ -118,25 +235,9 @@ input[type=number] {
     width: max-content;
 }
 
-#mesa > div:hover .desc {
-    display: flex;
-}
 
-input#limparResult + p {
-    display: none;
-    position: absolute;
-    background-color: var(--comentario-background-color);
-    color: var(--comentario-text-color);
-    padding:0.2%;
-}
-
-#limparResult:hover + p {
-    display: block;
-}
-
-
-@media (max-width: 1180px) {
-    #mesa {
+@media (max-width: 1580px) {
+    aside {
         top: calc(max(5%, 30vh));
         right: 5%;
     }

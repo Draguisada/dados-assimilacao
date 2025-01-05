@@ -36,6 +36,19 @@ function rolarDados() {
 
 }
 
+function contarSimbolos(string, mult=1) {
+    // let newString = '';
+    for(i=0;i<string.length;i++) {
+        switch (string[i]){
+            case'!': sucessosTotal+=1*mult; break;
+            case '?': adaptacoesTotal+=1*mult; break;
+            case '#': pressoesTotal+=1*mult; break;
+            default: break;
+        }
+    };
+    // return newString;
+}
+
 function simbolToEmoji(string) {
     let newString = '';
     for(i=0;i<string.length;i++) {
@@ -71,6 +84,10 @@ function limparMesa() {
     for(i=0;i<lencrionca;i++){
         mesa.removeChild(crionca[0]);
     };
+    sucessosTotal = 0;
+    adaptacoesTotal = 0;
+    pressoesTotal = 0;
+    updateTotal();
 }
 
 function mostrarMesa(dados) {
@@ -96,11 +113,18 @@ function mostrarMesa(dados) {
 
         dado.textContent = simbolToEmoji(element[1]);
         desc.innerHTML = descreverSimbolos(element[1]);
+        contarSimbolos(element[1]);
 
 
         dado.appendChild(desc);
         mesa.appendChild(dado);
 
    });
-    
+   updateTotal();
+}
+
+function updateTotal(string) {
+    sucessos.textContent = `${sucessosTotal} Sucessos`;
+    adaptacoes.textContent = `${adaptacoesTotal} Adaptações`;
+    pressoes.textContent = `${pressoesTotal} Pressões`;
 }

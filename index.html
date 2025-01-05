@@ -12,31 +12,50 @@
     <script src="JS/main.js" defer></script>
 </head>
 <body>
+    
     <main>
-        <div>
-            <input type="number" name="quantDados" id="x6">
-            <h1>X6</h1>
+        <div id="dados">
+            <div>
+                <h1>X6</h1><br>
+                <input type="number" name="quantDados" id="x6" value="0" min="0">
+                <img src="Icons/x6menu.svg" alt="Dado de 6 lados">
+            </div>
+            <div>
+                <h1>X10</h1><br>
+                <input type="number" name="quantDados" id="x10" value="0" min="0">
+                <img src="Icons/x10menu.svg" alt="Dado de 10 lados">
+            </div>
+            <div>
+                <h1>X12</h1><br>
+                <input type="number" name="quantDados" id="x12" value="0" min="0">
+                <img src="Icons/x12menu.svg" alt="Dado de 12 lados">
+            </div>
         </div>
-        <div>
-            <input type="number" name="quantDados" id="x10">
-            <h1>X10</h1>
+
+        <div id="menu">
+            <div id="rollDel">
+                <input type="button" value="ROLAR!" id="roll">
+                <input type="button" value="" id="limparResult">
+                <p>Você pode clicar nos dados para excluir-los individualmente</p>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" name="manterDado" id="manterDado" checked=true>
+                <p>Manter resultados ao rolar?</p>
+            </div>
+
         </div>
-        <div>
-            <input type="number" name="quantDados" id="x12">
-            <h1>X12</h1>
-        </div>
-        <div id="inputs">
-            <input type="button" value="ROLAR!" id="roll">
-            <input type="button" value="Limpar resultados" id="limparResult">
-            <p>Você pode clicar nos dados para excluir-los individualmente</p><br>
-            <input type="checkbox" name="manterDado" id="manterDado" checked=true>
-            <label for="manterDado">Mantes resultados ao rolar?</label>
-        </div>
-    </main>
     
 
-    <div id="historico"></div>
-
-    <div id="mesa"></div>
+        <div id="historico"></div>
+    </main>
+    <aside>
+        <div id="mesa"></div>
+        <div id="total">
+            <p id="suc">0 Sucessos</p>
+            <p id="adap">0 Adaptações</p>
+            <p id="pres">0 Pressões</p>
+        </div>
+    </aside>
 </body>
 </html>
