@@ -96,6 +96,7 @@ input#limparResult + p {
     background-color: var(--comentario-background-color);
     color: var(--comentario-text-color);
     padding:0.2%;
+    z-index: 2;
 }
 
 #limparResult:hover + p {
@@ -143,7 +144,6 @@ input#limparResult + p {
     transform: translateX(5%);
     font-size: 48px;
 }
-
 
 /*Dados literais*/
 
@@ -218,6 +218,8 @@ aside {
     color: var(--comentario-text-color);
     border-radius:  10px 10px 0 0;
     transform: translateY(-100%);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #mesa > div:hover .desc {
@@ -238,7 +240,31 @@ aside {
 
 @media (max-width: 1580px) {
     aside {
-        top: calc(max(5%, 30vh));
+        top: calc(max(35%, 30vh));
         right: 5%;
+    }
+    main {
+        width: 60%;
+    }
+    #dados {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1150px) {
+    aside {
+        top: calc(max(25%, 70vh));
+        right: auto;
+        width: 90%;
+    }
+    #mesa {
+        width: 98%;
+    }
+
+    main {
+        width: 90%;
+    }
+    #dados {
+        width: 100%;
     }
 }
