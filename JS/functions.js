@@ -111,9 +111,14 @@ function mostrarMesa(dados) {
             default: dado.classList.add('x12'); break;
         }
 
-        dado.textContent = simbolToEmoji(element[1]);
+        if (element[1].length > 0) {
+            contarSimbolos(element[1]); 
+            dado.textContent = simbolToEmoji(element[1]);
+        } else {
+            dado.classList.add('none');
+        }
         desc.innerHTML = descreverSimbolos(element[1]);
-        contarSimbolos(element[1]);
+        
 
 
         dado.appendChild(desc);

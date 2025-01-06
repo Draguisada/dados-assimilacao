@@ -17,22 +17,24 @@
         <div id="dados">
             <div id="d6">
                 <h1>X6</h1><br>
-                <input type="number" name="quantDados" id="x6" value="0" min="0">
+                <input type="number" name="quantDados" id="x6" value="0" min="0" placeholder="0">
                 <img src="Icons/x6menu.svg" alt="Dado de 6 lados">
             </div>
             <div id="d10">
                 <h1>X10</h1><br>
-                <input type="number" name="quantDados" id="x10" value="0" min="0">
+                <input type="number" name="quantDados" id="x10" value="0" min="0" placeholder="0">
                 <img src="Icons/x10menu.svg" alt="Dado de 10 lados">
             </div>
             <div id="d12">
                 <h1>X12</h1><br>
-                <input type="number" name="quantDados" id="x12" value="0" min="0">
+                <input type="number" name="quantDados" id="x12" value="0" min="0" placeholder="0">
                 <img src="Icons/x12menu.svg" alt="Dado de 12 lados">
             </div>
         </div>
 
         <div id="menu">
+            <input type="button" value="" id="limparResultBranco">
+            <p>Limpar resultados de dados brancos</p>
             <div id="rollDel">
                 <input type="button" value="ROLAR!" id="roll">
                 <input type="button" value="" id="limparResult">
@@ -45,9 +47,12 @@
             </div>
 
         </div>
-    
+
+        <textarea name="" id="textarea" cols="30" rows="12" placeholder="Anotações"></textarea>
 
         <div id="historico"></div>
+
+        
     </main>
     <aside>
         <div id="mesa"></div>

@@ -16,6 +16,7 @@ const quantX12 = document.getElementById('x12');
 const limparResults = document.getElementById('limparResult');
 const manterDados = document.getElementById('manterDado');
 const roll = document.getElementById('roll');
+const limparresultBranco = document.getElementById('limparResultBranco');
 
 // Objetos JS
 const tabelaDados = {
@@ -55,6 +56,14 @@ mesa.addEventListener('click', event => {
 });
 
 limparResults.addEventListener('click', limparMesa);
+
+limparresultBranco.addEventListener('click', function () {
+    let branco = document.getElementsByClassName('none');
+    let brancoLen = branco.length;
+    for (let i=0;i<brancoLen;i++) {
+        mesa.removeChild(branco[0]);
+    };
+})
 
 // Funções globais
 // Random intiger (Que é incluso) que pode ser um intervalo mas pode ser 0 até max
