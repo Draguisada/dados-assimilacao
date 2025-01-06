@@ -72,7 +72,7 @@ input[type=number] {
     height: 5rem;
     font-weight: bold;
     border: var(--roll-button-border-color);
-    font-size: 48px;
+    font-size: 36px;
     border-radius: 10px 0 0 10px;
 }
 
@@ -224,6 +224,10 @@ aside {
 
 #mesa > div:hover .desc {
     display: flex;
+}
+
+#mesa > div:hover .desc:hover {
+    display: none;
 }
 
 .desc, .desc:hover{
