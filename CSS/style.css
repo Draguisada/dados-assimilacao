@@ -72,8 +72,8 @@ input[type=number] {
     height: 5rem;
     font-weight: bold;
     border: var(--roll-button-border-color);
-    font-size: 36px;
-    border-radius: 10px 0 0 10px;
+    font-size: 48px;
+    border-radius: 0 0 0 10px;
 }
 
 #limparResult {
@@ -89,6 +89,8 @@ input[type=number] {
     border-radius: 0 10px 10px 0;
 }
 
+
+
 input#limparResult + p {
     display: none;
     position: absolute;
@@ -99,12 +101,35 @@ input#limparResult + p {
     z-index: 2;
 }
 
-#limparResult:hover + p {
+#limparResult:hover + p, #limparResultBranco:hover + p {
     display: block;
 }
 
-#limparResult:hover + p:hover {
+#limparResult:hover + p:hover, #limparResultBranco:hover + p:hover {
     display: none;
+}
+
+#limparResultBranco {
+    background-image: url(../Icons/trashnone.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--roll-button-background-color);
+    width: 20%;
+    height: 2rem;
+    font-weight: bold;
+    border: var(--roll-button-border-color);
+    border-radius: 10px 10px 0 0;
+}
+
+input#limparResultBranco + p {
+    display: none;
+    position: absolute;
+    transform: translateY(-250%);
+    background-color: var(--comentario-background-color);
+    color: var(--comentario-text-color);
+    padding:0.2%;
+    z-index: 2;
 }
 /* Dados "menu"*/
 
@@ -241,21 +266,16 @@ aside {
     width: max-content;
 }
 
-
-@media (max-width: 1580px) {
-    aside {
-        top: calc(max(35%, 30vh));
-        right: 5%;
-    }
-    main {
-        width: 60%;
-    }
-    #dados {
-        width: 100%;
-    }
+#mesa > div {
+    cursor: pointer;
 }
 
-@media (max-width: 1150px) {
+#textarea {
+    font-size: 1rem;
+    resize: none;
+}
+
+@media (max-width: 1580px) {
     aside {
         top: calc(max(25%, 70vh));
         right: auto;
@@ -264,11 +284,54 @@ aside {
     #mesa {
         width: 98%;
     }
-
     main {
-        width: 90%;
+        width: 99%;
     }
     #dados {
         width: 100%;
+    }
+}
+
+@media (max-width: 1150px) {
+    aside {
+        top: calc(max(25%, 80vh));
+        right: auto;
+        width: 90%;
+    }
+    #mesa {
+        width: 98%;
+    }
+
+    main {
+        width: 98%;
+    }
+    #dados {
+        width: 100%;
+    }
+    /* body {
+        width: 100%;
+        height: 100%;
+    } */
+}
+
+@media (max-width: 378px) {
+    aside {
+        top: calc(max(25%, 100vh));
+        right: auto;
+        width: 90%;
+    }
+    #mesa {
+        width: 98%;
+    }
+
+    main {
+        width: 99%;
+    }
+    #dados {
+        width: 100%;
+    }
+    body {
+        width: 100%;
+        height: 100%;
     }
 }
