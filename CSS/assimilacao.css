@@ -1,0 +1,104 @@
+#assimilar {
+    border-radius: 10px;
+    background-color: var(--roll-button-background-color);
+    width: 70%;
+    height: 5rem;
+    font-weight: bold;
+    border: var(--roll-button-border-color);
+    font-size: 48px;
+}
+
+#menu {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    align-content: center;
+}
+
+body {
+    margin:0;
+}
+
+#nvlAssm {
+    /* align-self: center; */
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+
+    background-color: transparent;
+    background-image: url(../Icons/assimilar.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-size: contain;
+    color: #5557DD;
+    border: none;
+}
+
+#rollDel {
+    width: fit-content;
+    margin-top: 1%;
+}
+
+#assimilar {
+    width: 100%;
+}
+
+aside {
+    right: auto;
+    position: relative;
+    margin-top: 5%;
+    margin-right: 0;
+}
+#mesa {
+    width: 100%;
+    border: none;
+}
+
+main {
+    width: 100%;
+    height: 35svh;
+}
+#dados {
+    width: 100%;
+}
+#total {
+    width: 100%;
+    
+}
+/* body {
+    width: 100%;
+    height: 100%;
+} */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+    position: absolute;
+    z-index: 2;
+    right: 1%;
+    top: 1%;
+}
+
+#total {
+    justify-content: left;
+    gap: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#total > p:first-of-type {
+    margin-left: 5%;
+}

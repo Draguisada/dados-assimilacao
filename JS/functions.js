@@ -6,13 +6,12 @@ function validarValores () {
     return {'x6': x6, 'x10': x10, 'x12': x12};
 }
 
-function rolarDados() {
-    let rolarDados;
-    if (!manterDados.checked) {
-        limparMesa();
-    }
+function rolarDados(rolarDados={'x6': 0, 'x10':0, 'x12':0}, cartas=false) {
+    if (!cartas){
+        if (!manterDados.checked) {
+            limparMesa();
+    }}
     
-    rolarDados = validarValores();
     let resultados = [];
     // Rolar todos os dados e identificando qual é X6, X10 ou X12.
     for(i=0;i<rolarDados.x6;i++) {
@@ -30,9 +29,14 @@ function rolarDados() {
         resultados[i][1] = tabelaDados[resultados[i][1]]
     }
 
-    historico.push(resultados);
-
-    mostrarMesa(resultados);
+    // historico.push(resultados);
+    if (!cartas){
+        mostrarMesa(resultados);
+    } else {
+        contarSimbolosDentroObjeto(resultados);
+        updateTotal();
+        mostrarCartas();
+    }
 
 }
 

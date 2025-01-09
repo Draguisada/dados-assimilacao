@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <title>Dados Assimilação</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/assimilacao.css">
+    <link rel="stylesheet" href="CSS/color/default.css" id="color">
+
+    <script src="JS/functions.js" defer></script>
+    <script src="JS/main.js" defer></script>
+    <script src="JS/assimilado.js" defer></script>
+
+    <script src="JS/Cartas/evolutivas.js"></script>
+    <script src="JS/Cartas/adaptativas.js"></script>
+    <script src="JS/Cartas/inoportunas.js"></script>
+</head>
+<body>
+    <main>
+        <a href="index.html" id="voltar"><input type="button" value="Voltar"></a>
+        <div id="menu">
+            <h2>Qual seu nível de Assimilação?</h2>
+            <input type="number" name="assim" id="nvlAssm" placeholder="1" max="10" min="1" value="1">
+            <div id="rollDel">
+                <input type="button" value="Assimilar" id="assimilar">
+            </div>
+            <textarea name="" id="textarea" cols="30" rows="12" placeholder="Anotações"></textarea>
+        </div>
+
+        
+        
+    </main>
+    <aside>
+        <div id="mesa"></div>
+        <div id="total">
+            <p id="suc">0 Sucessos</p>
+            <p id="adap">0 Adaptações</p>
+            <p id="pres">0 Pressões</p>
+        </div>
+    </aside>
+</body>
+</html>

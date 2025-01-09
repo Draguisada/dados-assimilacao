@@ -34,10 +34,10 @@ const tabelaDados = {
     12: "##"
 }
 
-let historico = [];
+// let historico = [];
 
 // Código base
-roll.addEventListener('click', rolarDados);
+roll.addEventListener('click', function () {rolarDados(validarValores())});
 
 // Quando clica em um dado ele remove o dado.
 mesa.addEventListener('click', event => {
