@@ -7,19 +7,28 @@
 
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/assimilacao.css">
+    <link rel="stylesheet" href="CSS/cartas.css">
     <link rel="stylesheet" href="CSS/color/default.css" id="color">
+
+    <script src="JS/Cartas/classe.js"></script>
+
+    <script src="JS/Cartas/evolutivas.js" defer></script>
+    <script src="JS/Cartas/adaptativas.js" defer></script>
+    <script src="JS/Cartas/inoportunas.js" defer></script>
 
     <script src="JS/functions.js" defer></script>
     <script src="JS/main.js" defer></script>
     <script src="JS/assimilado.js" defer></script>
 
-    <script src="JS/Cartas/evolutivas.js"></script>
-    <script src="JS/Cartas/adaptativas.js"></script>
-    <script src="JS/Cartas/inoportunas.js"></script>
+
+
+
 </head>
 <body>
+    <div id="stats"></div>
+    <a href="index.html" id="voltar"><input type="button" value="Voltar"></a>
     <main>
-        <a href="index.html" id="voltar"><input type="button" value="Voltar"></a>
+        
         <div id="menu">
             <h2>Qual seu nível de Assimilação?</h2>
             <input type="number" name="assim" id="nvlAssm" placeholder="1" max="10" min="1" value="1">
@@ -32,6 +41,7 @@
         
         
     </main>
+    
     <aside>
         <div id="mesa"></div>
         <div id="total">

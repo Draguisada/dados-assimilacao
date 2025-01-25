@@ -1,7 +1,14 @@
 const nvlAssim = document.getElementById('nvlAssm');
 const assimilar = document.getElementById('assimilar');
+// const descricoesCartas = document.getElementById('stats');
 
-assimilar.addEventListener('click', function () {rolarDados({'x6': 0, 'x10': 1, 'x12': Number(nvlAssim.value)}, true)});
+assimilar.addEventListener('click', function () {
+    limparMesa();
+    limparDescs();
+    rolarDados({'x6': 0, 'x10': 1, 'x12': Number(nvlAssim.value)}, true);
+});
+
+let instancia = 0;
 
 const facesCartas = {
     1: 'A',
@@ -19,14 +26,47 @@ const facesCartas = {
     13: 'K',
 }
 
+function limparDescs() {
+    let crionca = document.getElementsByClassName('cartasDesc');
+    const lencrionca = crionca.length;
+    for(i=0;i<lencrionca.length;i++){
+        document.body.removeChild(crionca[0]);
+    };
+}
+
+mesa.addEventListener('click', event => {
+    let tag = event.target.tag;
+    // let index = 0;
+    let descs = document.getElementsByClassName('cartasDesc');
+    for (i=0;i<descs.length;i++) {
+        descs[i].style.display = 'none';
+        if (descs[i].tag == tag) {
+            
+            showDescription(descs[i]);
+            continue;
+        }
+    }
+    
+});
+
+function closeFather(element) {
+    element.parentNode.style.display = 'none';
+}
+
+function getNvlAssimilacao() {
+    return Number(nvlAssim.value);
+}
 
 function contarSimbolosDentroObjeto(objeto, mult=1) {
+    sucessosTotal=0;
+    adaptacoesTotal=0;
+    pressoesTotal=0;
     objeto.forEach(element => {
         for(i=0;i<element[1].length;i++) {
             switch (element[1][i]){
-                case'!': sucessosTotal=1*mult; break;
-                case '?': adaptacoesTotal=1*mult; break;
-                case '#': pressoesTotal=1*mult; break;
+                case'!': sucessosTotal+=1*mult; break;
+                case '?': adaptacoesTotal+=1*mult; break;
+                case '#': pressoesTotal+=1*mult; break;
                 default: break;
             }
         };
@@ -34,37 +74,13 @@ function contarSimbolosDentroObjeto(objeto, mult=1) {
 }
 
 function mostrarCartas() {
-    cartas = [];
-    cartas.push(evolutiva(sucessosTotal));
-    cartas.push(adaptativas(adaptacoesTotal));
-    cartas.push(inoportunas(pressoesTotal));
-    cartas.forEach(element => {
-        const dado = document.createElement('div');
-        const desc = document.createElement('div');
-        desc.classList.add('desc');
-        // Logica para ver a carta
+    evolutiva(sucessosTotal);
+    // adaptativas(adaptacoesTotal);
+    // inoportunas(pressoesTotal);
+//    updateTotal();
+}
 
 
-        // O simbolo do dado (Se vai aparecer q é um D6, D10 ou D12)
-        switch (element[1]){
-            case 'x6': dado.classList.add('x6'); break;
-            case 'x10': dado.classList.add('x10'); break;
-            default: dado.classList.add('x12'); break;
-        }
-
-        if (element[1].length > 0) {
-            contarSimbolos(element[1]); 
-            dado.textContent = simbolToEmoji(element[1]);
-        } else {
-            dado.classList.add('none');
-        }
-        desc.innerHTML = descreverSimbolos(element[1]);
-        
-
-
-        dado.appendChild(desc);
-        mesa.appendChild(dado);
-
-   });
-   updateTotal();
+function showDescription(element) {
+    element.style.display = 'block';
 }

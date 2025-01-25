@@ -1,0 +1,63 @@
+.copas, .espadas, .ouros {
+    /* background-color: red; */
+    width: 280px;
+    aspect-ratio: 16/9;
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+
+    margin-top:2svh;
+}
+
+
+.xA.copas {
+    background-image: url(../Icons/Cartas/AC.svg);
+}
+
+.x2.copas {
+    background-image: url(../Icons/Cartas/2C.svg);
+}
+
+.x3.copas {
+    background-image: url(../Icons/Cartas/3C.svg);
+}
+
+.x4.copas {
+    background-image: url(../Icons/Cartas/4C.svg);
+}
+
+.x5.copas {
+    background-image: url(../Icons/Cartas/5C.svg);
+}
+
+.x6.copas {
+    background-image: url(../Icons/Cartas/6C.svg);
+}
+
+.x7.copas {
+    background-image: url(../Icons/Cartas/7C.svg);
+}
+
+.x8.copas {
+    background-image: url(../Icons/Cartas/8C.svg);
+}
+
+.x9.copas {
+    background-image: url(../Icons/Cartas/9C.svg);
+}
+
+.x10.copas {
+    background-image: url(../Icons/Cartas/10C.svg);
+}
+
+.xJ.copas {
+    background-image: url(../Icons/Cartas/JC.svg);
+}
+
+.xQ.copas {
+    background-image: url(../Icons/Cartas/QC.svg);
+}
+
+.xK.copas {
+    background-image: url(../Icons/Cartas/KC.svg);
+}
