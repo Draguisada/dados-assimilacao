@@ -4,16 +4,21 @@ class Carta {
         this.desc = document.createElement('div');
         this.desc.classList.add('cartasDesc');
         
-        this.descString = '<input type="button" value="X" class="xzinho" onclick="closeFather(this)"> <br>';
+        this.descString = '<input type="button" value="X" class="xzinho" onclick="closeFather(this)">';
     }
 
     classe(classeCSS) {
         this.obj.classList.add(classeCSS);
     }
 
+    nomeAdd(nome) {
+        this.nome = nome
+        this.descString += `<h1 class='nomeCarta'> Assimilação ${nome} </h1><br>`
+    }
+
     descAdd(desc) {
-        this.descString += desc;
-        this.descString += '<br><br>';
+        this.descString += `<p class='itemDesCarta'>${desc}</p>`;
+        this.descString += '<br>';
     }
 
     descStringToHTML() {

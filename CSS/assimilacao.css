@@ -134,6 +134,16 @@ textarea {
     text-align: center;
 }
 
+
+.nomeCarta {
+    text-align: center;
+}
+
+.itemDesCarta {
+    
+}
+
+
 @media (max-width: 1093px) {
     #textarea {
         display: none;
