@@ -34,19 +34,36 @@ function limparDescs() {
     };
 }
 
-mesa.addEventListener('click', event => {
+document.addEventListener('click', event => {
+    // Cada carta objeto tem uma tag junto com sua descrição
     let tag = event.target.tag;
+    
+    
     // let index = 0;
     let descs = document.getElementsByClassName('cartasDesc');
     for (i=0;i<descs.length;i++) {
+        
         descs[i].style.display = 'none';
-        if (descs[i].tag == tag) {
-            
-            showDescription(descs[i]);
-            continue;
+
+        //Otimizaçãozinha
+        if (descs[i].tag > tag) {
+            continue;     
         }
+        
+
+        // Apenas verifica se o objeto ter uma tag, se não, não é uma carta
+        // Se o objeto não for uma carta, ele ainda passará por todas as cartas e esconder elas.
+
+        // tag !== -1 é pro 0 não virar "false", então está fazendo procurar um valor INTIGER por isso o "==="
+        if (tag !== -1 || event.target.parentElement.tag){
+            if (descs[i].tag == tag || descs[i].tag == event.target.parentElement.tag) {
+                
+                showDescription(descs[i]);
+                scrollTo(0, 0);
+                continue;
+            }
     }
-    
+    }
 });
 
 function closeFather(element) {

@@ -4,7 +4,7 @@ class Carta {
         this.desc = document.createElement('div');
         this.desc.classList.add('cartasDesc');
         
-        this.descString = '<input type="button" value="X" class="xzinho" onclick="closeFather(this)">';
+        this.descString = '<gambiarra><input type="button" value="X" class="xzinho"></gambiarra>';
     }
 
     classe(classeCSS) {

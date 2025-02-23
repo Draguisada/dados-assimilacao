@@ -376,7 +376,7 @@ aside {
 
 @media (max-width: 378px) {
     aside {
-        top: calc(max(25%, 100vh));
+        /* top: calc(max(25%, 100vh)); */
         right: auto;
         width: 90%;
     }
