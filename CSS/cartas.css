@@ -9,7 +9,7 @@
     margin-top:2svh;
 }
 
-
+/*Evolutivas*/
 .xA.copas {
     background-image: url(../Icons/Cartas/AC.svg);
 }
@@ -60,4 +60,58 @@
 
 .xK.copas {
     background-image: url(../Icons/Cartas/KC.svg);
+}
+
+
+/*Inoportunas*/
+.xA.espadas {
+    background-image: url(../Icons/Cartas/AE.svg);
+}
+
+.x2.espadas {
+    background-image: url(../Icons/Cartas/2E.svg);
+}
+
+.x3.espadas {
+    background-image: url(../Icons/Cartas/3E.svg);
+}
+
+.x4.espadas {
+    background-image: url(../Icons/Cartas/4E.svg);
+}
+
+.x5.espadas {
+    background-image: url(../Icons/Cartas/5E.svg);
+}
+
+.x6.espadas {
+    background-image: url(../Icons/Cartas/6E.svg);
+}
+
+.x7.espadas {
+    background-image: url(../Icons/Cartas/7E.svg);
+}
+
+.x8.espadas {
+    background-image: url(../Icons/Cartas/8E.svg);
+}
+
+.x9.espadas {
+    background-image: url(../Icons/Cartas/9E.svg);
+}
+
+.x10.espadas {
+    background-image: url(../Icons/Cartas/10E.svg);
+}
+
+.xJ.espadas {
+    background-image: url(../Icons/Cartas/JE.svg);
+}
+
+.xQ.espadas {
+    background-image: url(../Icons/Cartas/QE.svg);
+}
+
+.xK.espadas {
+    background-image: url(../Icons/Cartas/KE.svg);
 }
