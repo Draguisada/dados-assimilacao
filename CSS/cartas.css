@@ -1,4 +1,4 @@
-.copas, .espadas, .ouros {
+ .carta {
     /* background-color: red; */
     width: 280px;
     aspect-ratio: 16/9;
@@ -8,6 +8,10 @@
 
     margin-top:2svh;
 }
+
+/* .copas, .espadas, .ouros {
+    pra qualquer coisa no futuro
+} */
 
 /*Evolutivas*/
 .xA.copas {

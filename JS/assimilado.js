@@ -29,15 +29,16 @@ const facesCartas = {
 function limparDescs() {
     let crionca = document.getElementsByClassName('cartasDesc');
     const lencrionca = crionca.length;
-    for(i=0;i<lencrionca.length;i++){
+    for(i=0;i<lencrionca;i++){
         document.body.removeChild(crionca[0]);
     };
 }
 
 document.addEventListener('click', event => {
     // Cada carta objeto tem uma tag junto com sua descrição
-    let tag = event.target.tag;
-    
+    let target = event.target;
+    let tag = target.tag;
+
     
     // let index = 0;
     let descs = document.getElementsByClassName('cartasDesc');
@@ -49,15 +50,29 @@ document.addEventListener('click', event => {
         if (descs[i].tag > tag) {
             continue;     
         }
-        
 
         // Apenas verifica se o objeto ter uma tag, se não, não é uma carta
         // Se o objeto não for uma carta, ele ainda passará por todas as cartas e esconder elas.
 
+        let ctrl = event.ctrlKey;
+
         // tag !== -1 é pro 0 não virar "false", então está fazendo procurar um valor INTIGER por isso o "==="
-        if (tag !== -1 || event.target.parentElement.tag){
-            if (descs[i].tag == tag || descs[i].tag == event.target.parentElement.tag) {
+        if (tag !== -1 || target.parentElement?.tag){
+
+            if (descs[i].tag == tag || descs[i].tag == target.parentElement.tag) {
+                // Favoritar
                 
+                if (ctrl && target) {
+                    target.classList.toggle('favorito');
+                    target = null;
+                }
+                
+                // Virar a carta quando já foi visualizada
+                if (target.visu == true){
+                    target.style.rotate = '180deg';
+                    target.visu = false;
+                }
+
                 showDescription(descs[i]);
                 scrollTo(0, 0);
                 continue;

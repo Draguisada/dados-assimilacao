@@ -141,7 +141,7 @@ function inoportunas(vezes){
                 carta.descAdd('🐺🐺🐺🐺🐺: Atrofia no sistema nervoso central impede a execução de múltiplas ações em uma única rodada, independentemente de quantos 🐞 ou 🦌 mantenha');
                
             break;  
-            default: 
+            case 'K': 
                 carta.classe('xK');
                 carta.nomeAdd('corroída');
                 carta.descAdd('🐺:  Exala um cheiro metálico aumenta o custo de ativação para interação com animais em 🐞');
@@ -150,13 +150,19 @@ function inoportunas(vezes){
                 carta.descAdd('🐺🐺🐺🐺: Sua pele se desgasta naturalmente, precisando trocar de pele a cada uma semana para evitar uma penalidade constante de 🐞 em qualquer teste; a troca de pele demora cerca de 4 horas');
                 carta.descAdd('🐺🐺🐺🐺🐺: O excesso de metal no seu sangue pode gerar cirrose; requerendo o tratamento com sangrias a cada semana ou a doença se instaura');
              break;
+            
+             default:
+                break;
         }
 
-        carta.classe('espadas')
+        if (carta.nome){
+            carta.classe('espadas');
+            carta.classe('carta');
 
-        carta.organizar();
+            carta.organizar();
 
-        mesa.appendChild(carta.obj);
-        document.body.appendChild(carta.desc);
+            mesa.appendChild(carta.obj);
+            document.body.appendChild(carta.desc);
+        }
     }
 }

@@ -126,7 +126,21 @@ textarea {
     padding: 2%;
     transform-origin: top;
     font-size: 1.3rem;
+
+    border: var(--roll-button-border-color) solid 8px;
+    border-radius: 20px;
+    
 }
+
+.carta {
+    transition: 0.8s ease-in-out rotate;
+}
+
+.favorito {
+    background-color: #ffb900ab;
+    box-shadow: #ffb900 0px 0px 12px 5px;
+}
+
 
 .xzinho {
     width: 2rem;

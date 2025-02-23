@@ -200,8 +200,8 @@ function evolutiva(vezes){
                 if (getNvlAssimilacao() >= 7 || ignorarMin){
                     carta.descAdd('🐞🐞🐞🐞🐞: Pode acelerar em até 10 vezes o crescimento da vegetação');
                 }
-            break;  
-            default: 
+            break; 
+            case 'K': 
                 carta.classe('xK');
                 carta.nomeAdd('da fauna');
                 carta.descAdd('🐞:  Adicione +1 ponto em Conhecimento Biológico (pode ultrapassar o limite máximo)');
@@ -216,13 +216,18 @@ function evolutiva(vezes){
                     carta.descAdd('🐞🐞🐞🐞🐞: Cria rebanho que o segue por conta própria testando Influência + Biológico');
                 }
              break;
-        }
 
-        carta.classe('copas')
+             default:
+                break;
+        }
+        if (carta.nome){
+        carta.classe('copas');
+        carta.classe('carta');
 
         carta.organizar();
 
         mesa.appendChild(carta.obj);
         document.body.appendChild(carta.desc);
+        }
     }
 }

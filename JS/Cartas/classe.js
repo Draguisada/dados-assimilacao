@@ -1,10 +1,13 @@
 class Carta {
     constructor() {
+        this.nome = false;
+        
         this.obj = document.createElement('div');
         this.desc = document.createElement('div');
         this.desc.classList.add('cartasDesc');
         
         this.descString = '<gambiarra><input type="button" value="X" class="xzinho"></gambiarra>';
+        this.obj.visu = true;
     }
 
     classe(classeCSS) {
