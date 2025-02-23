@@ -8,6 +8,17 @@
     font-size: 48px;
 }
 
+#voltarDados {
+    background-color:transparent;
+    background-image: url(../Icons/Dados/x12menu.svg);
+    background-position: center;
+    background-size: cover;
+    height: 2rem;
+    width: fit-content;
+    border: 0;
+    font-weight: bold;
+}
+
 #menu {
     justify-content: center;
     display: flex;
@@ -169,10 +180,10 @@ textarea {
 #ignorarTexto:hover + p {
     display: flex;
     z-index: 10;
-    transform: translate(-25%, 125%);
+    transform: translate(0%, 125%);
     background-color: var(--background-color);
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 @media (max-width: 1580px) {
@@ -186,7 +197,7 @@ textarea {
  /* deixar o assimilar e notas no msm tela*/
     main {
         display: flex;
-        margin-top:5svh;
+        margin-top:6svh;
     }
 }
 
@@ -242,6 +253,9 @@ textarea {
     #textarea {
         display: none;
     }
+    aside {
+        margin-top: 15%;
+    }
 }
 
 
@@ -253,7 +267,7 @@ textarea {
 
     } */
     aside {
-        margin-top: 30%;
+        margin-top: 45%;
     }
     
 }

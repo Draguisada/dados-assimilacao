@@ -113,6 +113,7 @@ input#limparResult + p {
 
 #limparResultBranco {
     background-image: url(../Icons/trashnone.svg);
+    transform: translate(0, 24px);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -324,7 +325,17 @@ aside {
     top: 1%;
 }
 
-
+#assimilarBotao {
+    background-image: url(../Icons/Cartas/AC.svg);
+    background-color:transparent;
+    background-position: center;
+    background-size: cover;
+    height: 4rem;
+    width: 3rem;
+    border: 0;
+    font-weight: bold;
+    transform: translate(0, -2%);
+}
 
 
 @media (max-width: 1580px) {
