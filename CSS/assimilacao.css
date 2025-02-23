@@ -146,8 +146,19 @@ textarea {
     width: 100%;
 }
 
-.itemDesCarta {
-    
+#ignorarTexto + p {
+    display: none;
+    z-index: 2;
+    position: absolute;
+}
+
+#ignorarTexto:hover + p {
+    display: flex;
+    z-index: 10;
+    transform: translate(-25%, 125%);
+    background-color: var(--background-color);
+    font-weight: bolder;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 1580px) {
