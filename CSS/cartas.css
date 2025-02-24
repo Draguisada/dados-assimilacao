@@ -119,3 +119,56 @@
 .xK.espadas {
     background-image: url(../Icons/Cartas/KE.svg);
 }
+
+/*Adaptativas*/
+.xA.ouros {
+    background-image: url(../Icons/Cartas/AO.svg);
+}
+
+.x2.ouros {
+    background-image: url(../Icons/Cartas/2O.svg);
+}
+
+.x3.ouros {
+    background-image: url(../Icons/Cartas/3O.svg);
+}
+
+.x4.ouros {
+    background-image: url(../Icons/Cartas/4O.svg);
+}
+
+.x5.ouros {
+    background-image: url(../Icons/Cartas/5O.svg);
+}
+
+.x6.ouros {
+    background-image: url(../Icons/Cartas/6O.svg);
+}
+
+.x7.ouros {
+    background-image: url(../Icons/Cartas/7O.svg);
+}
+
+.x8.ouros {
+    background-image: url(../Icons/Cartas/8O.svg);
+}
+
+.x9.ouros {
+    background-image: url(../Icons/Cartas/9O.svg);
+}
+
+.x10.ouros {
+    background-image: url(../Icons/Cartas/10O.svg);
+}
+
+.xJ.ouros {
+    background-image: url(../Icons/Cartas/JO.svg);
+}
+
+.xQ.ouros {
+    background-image: url(../Icons/Cartas/QO.svg);
+}
+
+.xK.ouros {
+    background-image: url(../Icons/Cartas/KE.svg);
+}

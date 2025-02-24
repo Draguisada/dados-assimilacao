@@ -107,7 +107,7 @@ function contarSimbolosDentroObjeto(objeto, mult=1) {
 
 function mostrarCartas() {
     evolutiva(sucessosTotal);
-    // adaptativas(adaptacoesTotal);
+    adaptativas(adaptacoesTotal);
     inoportunas(pressoesTotal);
 //    updateTotal();
 }
